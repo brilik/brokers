@@ -5,15 +5,70 @@
 ================================================================================
 */
 footer{
-  background:#000 url(../img/bg_footer.jpg) no-repeat left top;
-  height:80px;
+  background: $footer-bg;
   text-align:left;
   width:100%;
   min-width: $min-width;
   order: 3;
   -webkit-order: 3;
-}
 
+  .footer-up {
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-up__copyright {
+    font-family: $base-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $link-color;
+  }
+
+  .footer-up__navigation {
+    overflow: hidden;
+
+    a {
+      font-family: $base-font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 30px;
+      color: $link-color;
+      float: left;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-right: 65px;
+
+      &:hover,
+      &.active {
+        color: $link-color-hover;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .footer-line {
+    border: 1px solid #EDEDED;
+    margin: 24px 0;
+  }
+
+  .footer-down {
+    font-family: $base-font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #9B9B9B;
+    padding-bottom: 70px;
+  }
+}
 
 
 @media screen and (max-width: 1200px) {
@@ -33,5 +88,38 @@ footer{
 }
 
 @media screen and (max-width: 767px) {
+  footer {
 
+
+    .wrapper {
+      padding: 0 15px 0 15px;
+    }
+
+    .footer-up {
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+    }
+
+    .footer-up__copyright {
+      font-size: 12px;
+      padding: 15px 0 0 0;
+    }
+
+    .footer-up__navigation {
+      display: flex;
+      flex-direction: column;
+
+      & a {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    .footer-down {
+      padding-bottom: 30px
+    }
+  }
 }
