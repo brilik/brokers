@@ -107,5 +107,8 @@ var handler = function(){
 $(window).bind('load', handler);
 $(window).bind('resize', handler);
 
-
-
+$(function(){
+	$('.dropbtn').click(function(){
+		$('.dropdown-content').toggle();
+	});
+});
