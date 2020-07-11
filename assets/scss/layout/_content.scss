@@ -65,6 +65,18 @@ h3{
 .icon-load{background:url(../img/loader.gif) no-repeat left top;width:40px;height:40px;position:fixed;left:50%;top:50%;margin-left:-20px;margin-left:-20px;display:none;}
 .loaded .icon-load{display:block;}
 
+/* icons */
+.icon-loupe {@include icon('../img/icons/loupe.svg', 21px, 21px)}
+.icon-user {@include icon('../img/icons/user.svg', 21px, 21px)}
+.arrow-down {
+  content: "";
+  font-family: $base-font-family;
+  border: solid $link-color;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  @include rotate(45deg);
+}
 
 /*
 ================================================================================
