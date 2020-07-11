@@ -84,3 +84,11 @@
   line-height: $font-h;
   color:$font-c;
 }
+
+@mixin icon($url, $w, $h) {
+  display: block;
+  background: url($url) no-repeat left top;
+  width: $w;
+  height: $h;
+  color: $link-color;
+}
